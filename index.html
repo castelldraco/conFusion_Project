@@ -34,8 +34,10 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
-                    <span class="fa fa-sign-in"></span> Login</a>
+                    <!--<a data-toggle="modal" data-target="#loginModal">
+                    <span class="fa fa-sign-in"></span> Login</a>-->
+                    <a id="btnLogin">
+                        <span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>    
         </div>
@@ -155,8 +157,11 @@
                 <div class="col-12 col-sm-3 align-self-center">
                     <!--<a class="btn-sm btn-block btn-warning text-center text-black" style="text-decoration:none;" href="#reservation">Reserve Table</a>-->
                     <!--data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"-->
-                    <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="modal" data-target="#Reservate"
-                        data-placement="bottom" href="#reservation">Reserve Table</a>
+                    <!--<a role="button" class="btn btn-block nav-link btn-warning" data-toggle="modal" data-target="#Reservate"
+                    data-placement="bottom" href="#reservation">Reserve Table</a>-->
+
+                    <a role="button" class="btn btn-block nav-link btn-warning" href="#reservation" id="btnreserve">Reserve Table</a>
+                        
                 </div>
             </div>
         </div>
@@ -384,6 +389,21 @@
                 });
             })
         </script>
+
+        <script>
+            $('#btnreserve').click(
+                function(){
+                    $('#Reservate').modal('show'); 
+            });    
+        </script>
+
+        <script>
+            $('#btnLogin').click(
+                function(){
+                    $('#loginModal').modal('show'); 
+            });    
+        </script>
+        
 </body>
 
 </html>
